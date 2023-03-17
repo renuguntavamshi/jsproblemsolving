@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the smaller angle</h1>
+    <pre>
+        var Minimal_Angle = (h, m) => 
+        {
+          h=h%12;
+          let min=(m*360)/60;
+          let hour=(h*360)/12+(m*360)/(12*60);
+          let angle=Math.abs(hour-min);
+          
+          if(angle>180){
+            return 360-angle;
+          }
+          else{
+            return angle;
+          }
+          
+        };
+         
+        </pre>
+    
+    <h1>Check whether the year is leap year or not</h1>
+    <pre> 
+        var Check_Leap = (year) => 
+        {
+         if(year%400===0){
+          return "Leap Year"
+         }
+        else if(year%100===0){
+          return "Non Leap Year"
+        }
+        else if(year%4===0){
+          return "Leap Year"
+         }
+          
+        
+         else return "Non Leap Year"
+        
+        };
+         
+        </pre>
+    
+    <h1>Perfect number check</h1>
+    <pre> 
+        var Perfect_Check = (N) => 
+        {
+        
+          let sum=0;
+        for(let i=0;i < N;i++){
+          if(N%i===0){
+            sum+=i;
+          }
+        }
+        
+        if(sum===N){
+          return "YES";
+        }
+        else if(N===1){
+          return "YES";
+        }
+        else{
+        return "NO";
+        }
+        };
+         
+        </pre>
+    
+    <h1>Reverse the number</h1>
+    <pre> 
+        var Reverse_Number = (N) => 
+        {
+          let str=N.toString();
+          let finalres="";
+          for(let j=str.length-1;j>=0;j--){
+            if(str[j]!==0){
+              finalres+=str[j];
+            }
+            else if(str[j]===0){
+              finalres+=null;
+              
+            }
+          }
+          return Math.floor(finalres);
+        
+        };
+         
+        </pre>
+    
+    <h1>Substring check</h1>
+    <pre>
+        
+var Substring_Check = (S1, S2) => 
+{
+  let res=S1.split(" ");
+  let finalcount=0;
+let i=0;
+while(i<res.length){
+
+    if( res[i] === S2){
+      finalcount++;
+    }
+      i++;
+  }
+  if(finalcount>=1){
+    return "YES";
+  }
+  else{
+    return "NO";
+  }
+
+};
+ 
+
+    </pre>
+</body>
+</html>
